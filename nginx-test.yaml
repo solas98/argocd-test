@@ -6,14 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: nginx1
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx1
     spec:
       containers:
-      - name: nginx
+      - name: nginx1
         image: nginx:latest
         ports:
         - containerPort: 80
@@ -24,7 +24,7 @@ metadata:
   name: nginx-service
 spec:
   selector:
-    app: nginx
+    app: nginx1
   ports:
     - protocol: TCP
       port: 80
